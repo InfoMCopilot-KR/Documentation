@@ -12,7 +12,7 @@ Author: Created with GitHub Copilot assistance
 Date: 2024
 """
 
-from typing import List, Dict, Optional, Union, Tuple
+from typing import List, Dict, Union, Tuple
 import json
 import logging
 from dataclasses import dataclass
@@ -332,7 +332,7 @@ class DocumentationGenerator:
         
         Args:
             filename (str): The name of the file to create
-            format_type (str, optional): The format for the template ('json' or 'yaml').
+            format_type (str, optional): The format for the template ('json' only supported).
                                        Defaults to 'json'.
         
         Returns:
@@ -340,7 +340,7 @@ class DocumentationGenerator:
             
         Raises:
             IOError: If the file cannot be written
-            ValueError: If format_type is not supported
+            ValueError: If format_type is not 'json'
             
         Examples:
             >>> generator = DocumentationGenerator()
@@ -348,8 +348,8 @@ class DocumentationGenerator:
             >>> print(f"Template created: {success}")
             Template created: True
         """
-        if format_type not in ["json", "yaml"]:
-            raise ValueError("format_type must be 'json' or 'yaml'")
+        if format_type not in ["json"]:
+            raise ValueError("format_type must be 'json'")
         
         template = {
             "function_name": "your_function_name",
@@ -371,11 +371,8 @@ class DocumentationGenerator:
         }
         
         try:
-            if format_type == "json":
-                with open(filename, 'w', encoding='utf-8') as f:
-                    json.dump(template, f, indent=2)
-            # Note: YAML export would require PyYAML dependency
-            # This is a simplified example
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(template, f, indent=2)
             
             self.logger.info(f"Documentation template exported to {filename}")
             return True

@@ -47,10 +47,10 @@ def calculate_compound_interest(principal, rate, time, compound_frequency=1):
         
     Examples:
         >>> calculate_compound_interest(1000, 0.05, 2, 4)
-        1104.49
+        1104.49  # Approximate result
         
         >>> calculate_compound_interest(5000, 0.03, 10)
-        6719.58
+        6719.58  # Approximate result
     """
     result = principal * (1 + rate/compound_frequency) ** (compound_frequency * time)
     return result
