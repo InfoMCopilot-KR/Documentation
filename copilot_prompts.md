@@ -17,6 +17,8 @@ This document contains example prompts that demonstrate how to effectively use G
 
 ### Basic Function Docstring
 
+#### Open financial_calculations.py file use this prompt.
+
 **Prompt:**
 ```
 Generate a comprehensive Google-style docstring for this function:
@@ -58,6 +60,8 @@ def calculate_compound_interest(principal, rate, time, compound_frequency=1):
 
 ### Function with Complex Parameters
 
+#### Open data_processing_utils.py file use this prompt.
+
 **Prompt:**
 ```
 Add a NumPy-style docstring with detailed parameter descriptions and examples for this data processing function:
@@ -68,6 +72,8 @@ def process_user_data(users, filters=None, sort_by='name', ascending=True):
 ```
 
 ### Function with Exception Handling
+
+#### Open data_processing_utils.py file use this prompt.
 
 **Prompt:**
 ```
@@ -87,6 +93,8 @@ def validate_email_list(email_addresses):
 ## Class Documentation
 
 ### Basic Class Docstring
+
+#### Open task_management.py file use this prompt.
 
 **Prompt:**
 ```
@@ -138,6 +146,8 @@ Create an __init__.py docstring for a package called 'analytics' that provides d
 
 ### Adding Type Hints
 
+#### Open data_processing_utils.py file use this prompt line 20.
+
 **Prompt:**
 ```
 Add comprehensive type hints to this function signature and update the docstring accordingly:
@@ -174,6 +184,8 @@ def merge_dictionaries(
 ```
 
 ### Complex Type Annotations
+
+#### Open data_processing_utils.py file use this prompt line 26.
 
 **Prompt:**
 ```
@@ -248,6 +260,8 @@ def quicksort(arr, low=0, high=None):
 ```
 
 ### Algorithm Explanation Comments
+
+#### Use this prompt in algorithms.py file.
 
 **Prompt:**
 ```
